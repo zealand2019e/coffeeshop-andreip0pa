@@ -14,6 +14,8 @@ namespace CoffeeShopConsoleApp
             {
                new Latte(0),
                 new BlackCoffee(15),
+                new Cortado(15),
+                new Latte(15),
                 new Cortado(15)
 
             };
@@ -38,11 +40,14 @@ namespace CoffeeShopConsoleApp
                 }
             }
             ///MIXING ALL MIXABLES
+            ///If you are brave enough to mix stuff you get more discount!
             foreach (var item in mixables)
             {
                 foreach (var itemB in mixables)
                 {
                     item.Mix(itemB);
+                    Console.WriteLine(" with the discount "+(item as Coffee).Discount+"% ");
+                    Console.WriteLine();
                 }
             }
             ///

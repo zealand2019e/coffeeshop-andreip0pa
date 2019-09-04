@@ -17,13 +17,13 @@ namespace CoffeeShopConsoleApp
         {
             if (otherMixable.GetType() == typeof(Latte))
             {
-                Console.WriteLine("You got some milky weird mix!");
+                Console.Write("You got some milky weird mix!");
 
             }
 
             if (otherMixable.GetType() == typeof(Cortado))
             {
-                Console.WriteLine("You just got a very big Cortado! Nothing special!");
+                Console.Write("You just got a very big Cortado! Nothing special!");
             }
         }
 
