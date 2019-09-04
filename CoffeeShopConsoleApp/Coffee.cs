@@ -19,6 +19,12 @@ namespace CoffeeShopConsoleApp
             return 20;
         }
 
+        public int Discount { get; set; }
+
+        public Coffee(int discount)
+        {
+            Discount = discount;
+        }
         public abstract string Strength();
        
 

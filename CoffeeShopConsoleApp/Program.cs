@@ -28,6 +28,24 @@ namespace CoffeeShopConsoleApp
             {
                 Console.WriteLine("the Price of the coffee is : "+ coffee.price() +", the strength of the coffe is: "+coffee.Strength());
             }
+            List<IMixable> mixables = new List<IMixable>();
+            foreach (var item in orderList)
+            {
+                if (item is IMixable)
+                {
+                    mixables.Add((IMixable)item);
+                    
+                }
+            }
+            ///MIXING ALL MIXABLES
+            foreach (var item in mixables)
+            {
+                foreach (var itemB in mixables)
+                {
+                    item.Mix(itemB);
+                }
+            }
+            ///
 
 
 
